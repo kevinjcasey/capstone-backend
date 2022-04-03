@@ -49,5 +49,15 @@ class LoginSerializer(serializers.Serializer):
 class TriviaSerializer(serializer.ModelSerializer):
   class Meta:
     model = Trivia
-    fields = ('')
+    fields = (
+      'id', 
+      'category', 
+      'difficulty', 
+      'questionType',
+      'question',
+      'correct_answer',
+      'incorrect_answer1'
+      'incorrect_answer2'
+      'incorrect_answer3'
+    )
 

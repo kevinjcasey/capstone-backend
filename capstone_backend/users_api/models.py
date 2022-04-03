@@ -47,5 +47,8 @@ class Trivia(models.Model):
   category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='General Knowledge')
   difficulty = models.CharField(max_length=6, choices=DIFFICULTY_CHOICES, default='Easy')
   questionType = models.CharField(max_length=32, choices=TYPE_CHOICES, default='Multiple Choice')
-  question = models.CharField(max_length=100)
-  answer = models.
+  question = models.CharField(max_length=1000)
+  correct_answer = models.CharField(max_length=255)
+  incorrect_answer1 = models.CharField(max_length=255)
+  incorrect_answer2 = models.CharField(max_length=255)
+  incorrect_answer3 = models.CharField(max_length=255)
