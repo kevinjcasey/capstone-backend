@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Users
+from .models import Trivia
 
 ## USER AUTH
 from django.contrib.auth.models import User
@@ -45,5 +46,19 @@ class LoginSerializer(serializers.Serializer):
       return user
     raise serializers.ValidationError("Incorrect Credentials")
 
-
+## TRIVIA SERIALIZER
+class TriviaSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Trivia
+    fields = (
+      'id', 
+      'category', 
+      'difficulty', 
+      'questionType',
+      'question',
+      'correct_answer',
+      'incorrect_answer_one',
+      'incorrect_answer_two',
+      'incorrect_answer_three',
+    )
 
