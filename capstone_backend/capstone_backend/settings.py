@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-p%2!-6e+k$$ka)2kwn*(xn_30^f3vf!i_06#irhqee-@aj5=io
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'ga-capstone-back.herokuapp.com']
 
 
 # Application definition
@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'users_api',
         'USER': '',
         'PASSWORD': '',
-        'HOST': ['localhost', 'ga-capstone-back.herokuapp.com']
+        'HOST': 'localhost'
     }
 }
 
