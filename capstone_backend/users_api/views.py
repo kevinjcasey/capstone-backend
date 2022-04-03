@@ -19,6 +19,6 @@ class TriviaList(generics.ListCreateAPIView):
   queryset = Trivia.objects.all().order_by('id')
   serializer_class = TriviaSerializer
 
-class TriviaList(generics.RetrieveUpdateDestroyAPIView):
+class TriviaDetail(generics.RetrieveUpdateDestroyAPIView):
   queryset = Trivia.objects.all().order_by('id')
   serializer_class = TriviaSerializer
