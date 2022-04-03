@@ -45,5 +45,9 @@ class LoginSerializer(serializers.Serializer):
       return user
     raise serializers.ValidationError("Incorrect Credentials")
 
-
+## TRIVIA SERIALIZER
+class TriviaSerializer(serializer.ModelSerializer):
+  class Meta:
+    model = Trivia
+    fields = ('')
 
