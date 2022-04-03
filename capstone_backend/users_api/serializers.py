@@ -57,8 +57,8 @@ class TriviaSerializer(serializers.ModelSerializer):
       'questionType',
       'question',
       'correct_answer',
-      'incorrect_answer1'
-      'incorrect_answer2'
-      'incorrect_answer3'
+      'incorrect_answer_one',
+      'incorrect_answer_two',
+      'incorrect_answer_three',
     )
 
