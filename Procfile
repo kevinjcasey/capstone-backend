@@ -1,1 +1,1 @@
-web: gunicorn users_api.wsgi
+web: gunicorn capstone_backend.wsgi
