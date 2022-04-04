@@ -5,7 +5,7 @@ class Users(models.Model):
   password = models.CharField(max_length=32)
   high_score = models.IntegerField()
 
-CATEGORY_CHOICES = (
+CATEGORY_CHOICES = [
   ('General Knowledge', 'GENERAL KNOWLEDGE'),
   ('Entertainment: Books', 'ENTERTAINMENT: BOOKS'),
   ('Entertainment: Film', 'ENTERTAINMENT: FILM'),
@@ -20,7 +20,7 @@ CATEGORY_CHOICES = (
   ('Mythology', 'MYTHOLOGY'),
   ('Sports', 'SPORTS'),
   ('Geography', 'GEOGRAPHY'),
-  ('History', 'HISTROY'),
+  ('History', 'HISTORY'),
   ('Politics', 'POLITICS'),
   ('Art', 'ART'),
   ('Celebrities', 'CELEBRITIES'),
@@ -30,18 +30,18 @@ CATEGORY_CHOICES = (
   ('Science: Gadgets', 'SCIENCE: GADGETS'),
   ('Entertainment: Japanese Anime and Manga', 'ENTERTAINMENT: JAPANESE ANIME & MANGA'),
   ('Entertainment: Cartoon & Animations', 'ENTERTAINMENT: CARTOON & ANIMATIONS'),
-)
+]
 
-DIFFICULTY_CHOICES = (
+DIFFICULTY_CHOICES = [
   ('Easy', 'EASY'),
   ('Medium', 'MEDIUM'),
   ('Hard', 'HARD'),
-)
+]
 
-TYPE_CHOICES = (
+TYPE_CHOICES = [
   ('Multiple Choice', 'MULTILPLE CHOICE'),
   ('True/False', 'TRUE/FALSE'),
-)
+]
 
 class Trivia(models.Model):
   category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='General Knowledge')
